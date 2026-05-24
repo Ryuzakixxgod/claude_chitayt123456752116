@@ -1,0 +1,66 @@
+plugins {
+    id 'fabric-loom' version '1.7.4'
+    id 'maven-publish'
+}
+
+version = '1.0.0'
+group   = 'ru.ryuzaki'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabricmc.net/' }
+}
+
+dependencies {
+    minecraft      "com.mojang:minecraft:1.21.4"
+    mappings       "net.fabricmc:yarn:1.21.4+build.3:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.16.13"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.110.0+1.21.4"
+    implementation files("libs/mediatransport4j-1.0.2.jar")
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+sourceSets {
+    main {
+        java {
+            exclude 'ru/ryuzaki/ui/animation/**'
+            exclude 'ru/ryuzaki/ui/base/**'
+            exclude 'ru/ryuzaki/ui/components/*.java'
+            exclude 'ru/ryuzaki/ui/core/**'
+            exclude 'ru/ryuzaki/ui/render/**'
+            exclude 'ru/ryuzaki/client/gui/framework/**'
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release  = 21
+    options.compilerArgs << '-Xlint:none'
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') {
+        expand 'version': project.version
+    }
+}
+
+loom {
+    accessWidenerPath = file('src/main/resources/ryuzaki.accesswidener')
+
+    runs {
+        client {
+            client()
+            vmArgs(
+                    '-Xmx2G',
+                    '-Xms512M'
+            )
+            programArgs '--username', 'Pivo_Andre', '--accessToken', '0', '--userType', 'legacy'
+        }
+    }
+}
