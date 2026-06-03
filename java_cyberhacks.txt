@@ -1,0 +1,9 @@
+src/main/java/com/professor/cyberhacks/RotationManager.java
+src/main/java/com/professor/cyberhacks/MC.java
+src/main/java/com/professor/cyberhacks/NetworkDebugger.java
+src/main/java/com/professor/cyberhacks/PacketQueue.java
+src/main/java/com/professor/cyberhacks/CyberHacksModule.java
+src/main/java/com/professor/cyberhacks/EntropyManager.java
+src/main/java/com/professor/cyberhacks/PacketBuffer.java
+src/main/java/com/professor/cyberhacks/TargetUtils.java
+src/main/java/com/professor/cyberhacks/DebugLogger.java

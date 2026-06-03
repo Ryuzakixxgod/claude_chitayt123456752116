@@ -1,0 +1,4 @@
+
+--- src/main/java/ru/ryuzaki/module/modules/misc/MusicPlayerModule.java ---
+[Thread Creation] Line 93: Thread t = new Thread(r,"RyuzakiSMTC");
+[ProcessBuilder] Line 111: ProcessBuilder pb = new ProcessBuilder(
