@@ -1,0 +1,58 @@
+
+--- src/main/java/com/professor/cyberhacks/NetworkDebugger.java ---
+[File I/O] Line 4: import java.io.FileWriter;
+
+--- src/main/java/com/professor/cyberhacks/DebugLogger.java ---
+[File I/O] Line 3: import java.io.FileWriter;
+
+--- src/main/java/ru/ryuzaki/config/ConfigManager.java ---
+[File I/O] Line 14: import java.nio.file.*;
+[Thread Creation] Line 60: Thread t = new Thread(() -> {
+
+--- src/main/java/ru/ryuzaki/command/commands/ConfigCommand.java ---
+[ProcessBuilder] Line 46: if (os.contains("win"))       new ProcessBuilder("explorer", dir.getAbsolutePath()).start();
+[ProcessBuilder] Line 47: else if (os.contains("mac"))  new ProcessBuilder("open",     dir.getAbsolutePath()).start();
+[ProcessBuilder] Line 48: else                          new ProcessBuilder("xdg-open", dir.getAbsolutePath()).start();
+
+--- src/main/java/ru/ryuzaki/compat/IrisCompat.java ---
+[Reflection] Line 23: private static java.lang.reflect.Method methodShadersEnabled   = null;
+[Reflection] Line 24: private static java.lang.reflect.Method methodCurrentShaderName = null;
+[Reflection] Line 34: java.lang.reflect.Method getInstance = irisApi.getMethod("getInstance");
+
+--- src/main/java/ru/ryuzaki/util/MediaUtil.java ---
+[Reflection] Line 13: import java.lang.reflect.Method;
+[Thread Creation] Line 70: Thread t = new Thread(r, "RyuzakiMedia");
+[ProcessBuilder] Line 147: Process proc = new ProcessBuilder("powershell.exe", "-NonInteractive", "-NoProfile", "-Command",
+
+--- src/main/java/ru/ryuzaki/ui/components/gif/GifDecoder.java ---
+[File I/O] Line 11: import java.io.FileInputStream;
+[Network] Line 14: import java.net.URL;
+
+--- src/main/java/ru/ryuzaki/ui/components/Keybind.java ---
+[Hardcoded Secret] Line 611: return "Keybind{name=" + displayName + ", key=" + keyName + ", code=" + keyCode +
+
+--- src/main/java/ru/ryuzaki/client/util/ClientStats.java ---
+[Reflection] Line 9: import java.lang.reflect.Method;
+[Reflection] Line 10: import java.lang.reflect.Modifier;
+
+--- src/main/java/ru/ryuzaki/gui/MusicPlayerScreen.java ---
+[Network] Line 11: import java.net.URI;
+[Network] Line 12: import java.net.http.HttpClient;
+[Network] Line 13: import java.net.http.HttpRequest;
+[Network] Line 14: import java.net.http.HttpResponse;
+[Thread Creation] Line 444: Thread t = new Thread(r, "RyuzakiMusicStream");
+
+--- src/main/java/ru/ryuzaki/gui/AltManagerScreen.java ---
+[File I/O] Line 10: import java.io.File;
+[File I/O] Line 11: import java.io.FileReader;
+[File I/O] Line 12: import java.io.FileWriter;
+[Reflection] Line 101: java.lang.reflect.Field sf=null;
+[Reflection] Line 105: for(java.lang.reflect.Field f:clazz.getDeclaredFields()){
+[Reflection] Line 117: for(java.lang.reflect.Constructor<?> ctor:sessionClass.getDeclaredConstructors()){
+
+--- src/main/java/ru/ryuzaki/lang/LanguageManager.java ---
+[File I/O] Line 6: import java.nio.file.*;
+
+--- src/main/java/rich/util/render/font/MsdfFont.java ---
+[File I/O] Line 11: import java.nio.file.Files;
+[File I/O] Line 12: import java.nio.file.Path;
